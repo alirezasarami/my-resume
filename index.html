@@ -1,566 +1,562 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-	<title></title>
-	<meta name="generator" content="LibreOffice 24.2.7.2 (Linux)"/>
-	<meta name="author" content="Alireza-Sarami"/>
-	<meta name="created" content="2025-01-30T13:19:00"/>
-	<meta name="changed" content="2025-11-03T21:49:30.785393048"/>
-	<meta name="AppVersion" content="15.0000"/>
-	<meta name="GrammarlyDocumentId" content="73e3a5e819c9438a7620b179af98e24594b014ac3a862f6f356efc6e826363de"/>
-	<style type="text/css">
-		@page { size: 8.5in 11in; margin: 1in }
-		p { color: #000000; line-height: 115%; text-align: left; orphans: 2; widows: 2; margin-bottom: 0.1in; direction: ltr; background: transparent }
-		p.western { font-family: "Calibri", serif; font-size: 11pt; so-language: en-US }
-		p.cjk { font-family: "Calibri"; font-size: 11pt; so-language: en-US }
-		p.ctl { font-family: serif; font-size: 11pt; so-language: ar-SA }
-		h1 { color: #2e74b5; line-height: 108%; text-align: left; page-break-inside: avoid; orphans: 2; widows: 2; margin-bottom: 0in; direction: ltr; background: transparent; page-break-after: avoid }
-		h1.western { font-family: "Calibri Light", serif; font-size: 16pt; so-language: en-US }
-		h1.cjk { font-family: ; font-size: 16pt; so-language: en-US }
-		h1.ctl { font-family: serif; font-size: 16pt; so-language: ar-SA }
-		h2 { color: #2e74b5; line-height: 108%; text-align: left; page-break-inside: avoid; orphans: 2; widows: 2; margin-top: 0.03in; margin-bottom: 0in; direction: ltr; background: transparent; page-break-after: avoid }
-		h2.western { font-family: "Calibri Light", serif; font-size: 13pt; so-language: en-US }
-		h2.cjk { font-family: ; font-size: 13pt; so-language: en-US }
-		h2.ctl { font-family: serif; font-size: 13pt; so-language: ar-SA }
-		h3 { color: #1f4d78; line-height: 108%; text-align: left; page-break-inside: avoid; orphans: 2; widows: 2; margin-top: 0.03in; margin-bottom: 0in; direction: ltr; background: transparent; page-break-after: avoid }
-		h3.western { font-family: "Calibri Light", serif; font-size: 12pt; so-language: en-US }
-		h3.cjk { font-family: ; font-size: 12pt; so-language: en-US }
-		h3.ctl { font-family: serif; font-size: 12pt; so-language: ar-SA }
-		strong { font-weight: bold }
-		a:link { color: #0563c1; text-decoration: underline }
-		code.western { font-family: "Liberation Mono", serif }
-		code.cjk { font-family: "Liberation Mono" }
-		code.ctl { font-family: "Liberation Mono", serif }
-		a:visited { color: #800000; text-decoration: underline }
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alireza Sarami - Lead Backend Engineer</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2e74b5;
+            --secondary-color: #1f4d78;
+            --accent-color: #f8f9fa;
+            --text-color: #333;
+            --light-text: #6c757d;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+        
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        h3 {
+            color: var(--secondary-color);
+            margin-top: 1.5rem;
+        }
+        
+        .header-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 0;
+            margin-bottom: 2rem;
+            border-radius: 0 0 10px 10px;
+        }
+        
+        .header-section h1 {
+            color: white;
+            font-size: 3rem;
+            font-weight: 700;
+        }
+        
+        .header-section .lead {
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+        
+        .contact-info {
+            margin-top: 1.5rem;
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            margin-right: 1.5rem;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        .contact-info i {
+            margin-right: 0.5rem;
+            width: 20px;
+        }
+        
+        .section-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .section-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--primary-color);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+        }
+        
+        .timeline-date {
+            font-style: italic;
+            color: var(--light-text);
+            margin-bottom: 0.5rem;
+        }
+        
+        .skill-item {
+            margin-bottom: 1rem;
+        }
+        
+        .skill-name {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        
+        .skill-bar {
+            height: 8px;
+            background-color: #e9ecef;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .skill-level {
+            height: 100%;
+            background-color: var(--primary-color);
+            border-radius: 4px;
+        }
+        
+        .badge-custom {
+            background-color: var(--primary-color);
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-card {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-title {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-date {
+            font-style: italic;
+            color: var(--light-text);
+            margin-bottom: 1rem;
+        }
+        
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .header-section h1 {
+                font-size: 2rem;
+            }
+            
+            .header-section .lead {
+                font-size: 1.2rem;
+            }
+            
+            .contact-info a {
+                display: block;
+                margin-bottom: 0.75rem;
+            }
+        }
+    </style>
 </head>
-<body lang="en-US" text="#000000" link="#0563c1" vlink="#800000" dir="ltr"><h1 class="western" align="center">
-<font face="Georgia, serif"><span style="text-transform: uppercase"><font color="#666666"><font size="7" style="font-size: 35pt">ALIREZA</font></font></span><span style="text-transform: uppercase"><font size="7" style="font-size: 35pt">
-</font></span><span style="text-transform: uppercase"><font color="#262626"><font size="7" style="font-size: 35pt"><b>SARAMI</b></font></font></span></font></h1>
-<p align="center" style="line-height: 108%; margin-top: 0.17in; margin-bottom: 0.08in; page-break-after: avoid">
-<font face="Liberation Sans, serif"><font size="6" style="font-size: 28pt"><b><code class="western"><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Lead
-Backend Engineer | Python &amp; Distributed Systems</font></font></code></b></font></font></p>
-<p class="western" align="center" style="line-height: 108%; margin-bottom: 0.11in">
-<code class="western"><font face="Georgia, serif"><i><b>Tehran, Iran
-| Open to relocation in Europe &amp; GCC | Remote </b></i></font></code>
-</p>
-<p class="western" align="center" style="line-height: 108%; margin-bottom: 0.11in">
-<font face="Georgia, serif">+98 937 292 9651</font></p>
-<p class="western" align="center" style="line-height: 100%; margin-bottom: 0in">
-<a href="mailto:alirezasaramiii@gmail.com"><font color="#0070c0"><font face="Georgia, serif"><u><b>alirezasaramiii@gmail.com</b></u></font></font></a><font color="#0070c0"><font face="Georgia, serif"><b>
-·</b></font></font><font color="#0070c0"><font face="Georgia, serif"><b>
-</b></font></font>
-</p>
-<p class="western" align="center" style="line-height: 100%; margin-bottom: 0in">
-<a href="https://www.linkedin.com/in/alireza-sarami/"><font color="#0070c0"><font face="Georgia, serif"><u><b>https://www.linkedin.com/in/alireza-sarami/</b></u></font></font></a><font color="#0070c0"><font face="Georgia, serif"><b>
-</b></font></font><font color="#0070c0"><font face="Georgia, serif"><b>·</b></font></font></p>
-<p class="western" align="center" style="line-height: 100%; margin-bottom: 0in">
-<font color="#0070c0"> </font><font color="#0563c1"><u><a href="https://github.com/alirezasarami"><font face="Georgia, serif"><b>https://github.com/alirezasarami</b></font></a></u></font></p>
-<p class="western" style="line-height: 100%; margin-bottom: 0in"><br/>
+<body>
+    <!-- Header Section -->
+    <header class="header-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1>ALIREZA SARAMI</h1>
+                    <p class="lead">Lead Backend Engineer | Python & Distributed Systems</p>
+                    <p class="mb-0">Tehran, Iran | Open to relocation in Europe & GCC | Remote</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-info">
+                        <a href="tel:+989372929651"><i class="fas fa-phone"></i>+98 937 292 9651</a>
+                        <a href="mailto:alirezasaramiii@gmail.com"><i class="fas fa-envelope"></i>alirezasaramiii@gmail.com</a>
+                        <a href="https://www.linkedin.com/in/alireza-sarami/" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a>
+                        <a href="https://github.com/alirezasarami" target="_blank"><i class="fab fa-github"></i>GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-</p>
-<h2 class="western"><font face="Georgia, serif"><b>Professional
-Summary</b></font></h2>
-<p class="western" style="line-height: 100%; margin-top: 0.19in; margin-bottom: 0.19in">
-<font face="Georgia, serif"><font size="3" style="font-size: 12pt">Lead
-Backend Engineer with 6+ years in scaling distributed systems, APIs,
-and blockchain platforms. Demonstrated leadership in team management
-and integrations with Kafka, Celery, and Kubernetes. Expert in Python
-(Django, FastAPI) and Web3 for DeFi solutions. Seeking Lead Backend
-Engineer roles to drive enterprise-scale projects.</font></font></p>
-<p class="western" style="line-height: 100%; margin-bottom: 0in"><br/>
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Professional Summary -->
+        <section class="section-card">
+            <h2>Professional Summary</h2>
+            <p>Lead Backend Engineer with 6+ years in scaling distributed systems, APIs, and blockchain platforms. Demonstrated leadership in team management and integrations with Kafka, Celery, and Kubernetes. Expert in Python (Django, FastAPI) and Web3 for DeFi solutions. Seeking Lead Backend Engineer roles to drive enterprise-scale projects.</p>
+        </section>
 
-</p>
-<h2 class="western"><font face="Georgia, serif"><b>Professional
-Experience</b></font></h2>
-<h3 class="western"><font face="Georgia, serif"><b>Lead Backend
-Engineer (Django &amp; Python)</b></font></h3>
-<p class="western" style="line-height: 100%; margin-top: 0.19in; margin-bottom: 0.19in">
-<font face="Georgia, serif"><font size="3" style="font-size: 12pt">Blubank
-| May</font><font size="3" style="font-size: 12pt"><i> 2025 –
-Present</i></font></font></p>
-<ul>
-	<li><p class="western"><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Orchestrated</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	the technical acquisition of a core e-commerce platform from a
-	partner company. To align it with our enterprise standards, I drove
-	a strategic initiative to </font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">refactor
-	over 80% of the original codebase</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">.
-	This overhaul resulted in significant improvements to performance,
-	security, and maintainability, establishing a stable and scalable
-	foundation to serve </font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">5,000+
-	customers</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	and future business growth. </font></font>
-	</p></li>
-	<li><p class="western"><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Configured
-	and customized</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	critical services including </font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Celery</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">,
-	</font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Kafka</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">,
-	</font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">MinIO</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">,
-	</font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Oracle</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">,
-	and </font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Logging</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	to align with enterprise-grade architecture.</font></font></p></li>
-	<li><p class="western"><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Designed
-	and implemented</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	the </font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">core
-	application layer</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	(custom </font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Views</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">,
-	</font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Requests</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">,
-	and </font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Responses</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">)
-	to standardize system structure and improve maintainability.</font></font></p></li>
-	<li><p class="western"><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Enhanced
-	performance</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	and </font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">extended
-	functionality</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	through modular updates and codebase refactoring.</font></font></p></li>
-	<li><p class="western"><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Led
-	the recruitment and onboarding</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	of new backend engineers — conducted </font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">technical
-	interviews</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">,
-	defined </font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">best
-	practices</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">,
-	and built a collaborative development environment.</font></font></p></li>
-	<li><p class="western"><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Currently
-	managing the team developing the </font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Seller
-	Panel</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">,
-	integrating multi-service communication and real-time data
-	synchronization.</font></font></p></li>
-	<li><p class="western"><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Spearheaded
-	cross-functional collaboration</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	with DevOps, Gateway, Database, Security, and IAM teams to architect
-	and deliver enterprise-grade services, ensuring seamless integration
-	and optimal performance.</font></font></p></li>
-</ul>
-<h3 class="western"><font face="Georgia, serif"><b>Freelance Python &amp;
-Blockchain Developer</b></font></h3>
-<p class="western" style="line-height: 100%; margin-top: 0.19in; margin-bottom: 0.19in">
-<font face="Georgia, serif"><font size="3" style="font-size: 12pt"><i>October
-2023 – February 2025</i></font></font></p>
-<ul>
-	<li><p class="western" style="line-height: 100%; margin-top: 0.19in; margin-bottom: 0in">
-	<font face="Georgia, serif"><font size="3" style="font-size: 12pt">Developed
-	</font><font size="3" style="font-size: 12pt"><b>Solana Whale
-	Address Tracker</b></font><font size="3" style="font-size: 12pt">, a
-	blockchain analytics platform that monitors whale movements in
-	memecoin markets, integrating </font><font size="3" style="font-size: 12pt"><b>Solana
-	RPC APIs</b></font><font size="3" style="font-size: 12pt">, </font><font size="3" style="font-size: 12pt"><b>AI/ML
-	models</b></font><font size="3" style="font-size: 12pt">, and
-	real-time transaction analysis.</font></font></p></li>
-	<li><p class="western" style="line-height: 100%; margin-bottom: 0in">
-	<font face="Georgia, serif"><font size="3" style="font-size: 12pt">Provided
-	crypto analytics consulting, leveraging on-chain data to predict
-	market trends and track DeFi liquidity movements.</font></font></p></li>
-	<li><p class="western" style="line-height: 100%; margin-bottom: 0in">
-	<font face="Georgia, serif"><font size="3" style="font-size: 12pt">Deployed
-	scalable blockchain solutions using </font><font size="3" style="font-size: 12pt"><b>Docker</b></font><font size="3" style="font-size: 12pt">,
-	</font><font size="3" style="font-size: 12pt"><b>Kubernetes</b></font><font size="3" style="font-size: 12pt">,
-	</font><font size="3" style="font-size: 12pt"><b>PostgreSQL</b></font><font size="3" style="font-size: 12pt">,
-	</font><font size="3" style="font-size: 12pt"><b>MongoDB</b></font><font size="3" style="font-size: 12pt">,
-	and CI/CD pipelines.</font></font></p></li>
-	<li><p class="western" style="line-height: 100%; margin-bottom: 0in">
-	<font face="Georgia, serif"><font size="3" style="font-size: 12pt">Implemented
-	secure data handling protocols for sensitive information like API
-	keys and tokens.</font></font></p></li>
-	<li><p class="western" style="line-height: 100%; margin-bottom: 0.19in">
-	<font face="Georgia, serif"><font size="3" style="font-size: 12pt">Integrated
-	</font><font size="3" style="font-size: 12pt"><b>JWT-based
-	authentication</b></font><font size="3" style="font-size: 12pt">
-	mechanisms for secure user data management.</font></font></p></li>
-</ul>
-<h3 class="western"><font face="Georgia, serif"><b>Blockchain
-Developer</b></font></h3>
-<p class="western" style="line-height: 100%; margin-top: 0.19in; margin-bottom: 0.19in">
-<font face="Georgia, serif"><font size="3" style="font-size: 12pt"><i>XPHXCO
-| March 2023 – October 2023</i></font></font></p>
-<ul>
-	<li><p class="western" style="line-height: 100%; margin-top: 0.19in; margin-bottom: 0in">
-	<font face="Georgia, serif"><font size="3" style="font-size: 12pt">Delivered
-	smart contracts and NFT solutions, contributing to the launch of
-	three blockchain-based products.</font></font></p></li>
-	<li><p class="western" style="line-height: 100%; margin-bottom: 0in">
-	<font face="Georgia, serif"><font size="3" style="font-size: 12pt">Improved
-	system reliability by 25% through advanced security and scalability
-	measures in DApps.</font></font></p></li>
-	<li><p class="western" style="line-height: 100%; margin-bottom: 0in">
-	<font face="Georgia, serif"><font size="3" style="font-size: 12pt">Spearheaded
-	blockchain integrations using </font><font size="3" style="font-size: 12pt"><b>Web3.py</b></font><font size="3" style="font-size: 12pt">,
-	enhancing performance by 20%.</font></font></p></li>
-	<li><p class="western" style="line-height: 100%; margin-bottom: 0.19in">
-	<font face="Georgia, serif"><font size="3" style="font-size: 12pt">Implemented
-	secure authentication protocols such as </font><font size="3" style="font-size: 12pt"><b>OAuth
-	2.0</b></font><font size="3" style="font-size: 12pt"> and </font><font size="3" style="font-size: 12pt"><b>OpenID
-	Connect (OIDC)</b></font><font size="3" style="font-size: 12pt">.</font></font></p></li>
-</ul>
-<h3 class="western"><font face="Georgia, serif"><b>Technical
-Lead/Manager of Web Development Team</b></font></h3>
-<p class="western" style="line-height: 100%; margin-top: 0.19in; margin-bottom: 0.19in">
-<font face="Georgia, serif"><font size="3" style="font-size: 12pt"><i>ARIISCO
-| March 2022 – March 2023</i></font></font></p>
-<ul>
-	<li><p class="western" style="line-height: 100%; margin-top: 0.19in; margin-bottom: 0in">
-	<font face="Georgia, serif"><font size="3" style="font-size: 12pt">Directed
-	a team of 10 developers, achieving a 95% on-time project delivery
-	rate for over 15 web applications.</font></font></p></li>
-	<li><p class="western" style="line-height: 100%; margin-bottom: 0in">
-	<font face="Georgia, serif"><font size="3" style="font-size: 12pt">Increased
-	delivery efficiency by 20% through optimized resource allocation and
-	process improvements.</font></font></p></li>
-	<li><p class="western" style="line-height: 100%; margin-bottom: 0in">
-	<font face="Georgia, serif"><font size="3" style="font-size: 12pt">Reduced
-	codebase issues by 40% by establishing coding standards and
-	conducting regular code reviews.</font></font></p></li>
-	<li><p class="western" style="line-height: 100%; margin-bottom: 0.19in">
-	<font face="Georgia, serif"><font size="3" style="font-size: 12pt">Boosted
-	team productivity by 30% through mentoring and skill development
-	initiatives.</font></font></p></li>
-</ul>
-<h3 class="western"><font face="Georgia, serif"><b>Web Developer
-(Django, Flask, FastAPI)</b></font></h3>
-<p class="western" style="line-height: 100%; margin-top: 0.19in; margin-bottom: 0.19in">
-<font face="Georgia, serif"><font size="3" style="font-size: 12pt"><i>ARIISCO
-| April 2021 – March 2022</i></font></font></p>
-<ul>
-	<li><p class="western" style="line-height: 100%; margin-top: 0.19in; margin-bottom: 0in">
-	<font face="Georgia, serif"><font size="3" style="font-size: 12pt">Enhanced
-	web application performance by 25% through advanced optimization
-	techniques using </font><font size="3" style="font-size: 12pt"><b>Python
-	(Django, FastAPI)</b></font><font size="3" style="font-size: 12pt">.</font></font></p></li>
-	<li><p class="western" style="line-height: 100%; margin-bottom: 0in">
-	<font face="Georgia, serif"><font size="3" style="font-size: 12pt">Designed
-	and implemented features that increased user engagement by 15%.</font></font></p></li>
-	<li><p class="western" style="line-height: 100%; margin-bottom: 0.19in">
-	<font face="Georgia, serif"><font size="3" style="font-size: 12pt">Developed
-	</font><font size="3" style="font-size: 12pt"><b>asynchronous REST
-	APIs</b></font><font size="3" style="font-size: 12pt"> with </font><font size="3" style="font-size: 12pt"><b>FastAPI</b></font><font size="3" style="font-size: 12pt">,
-	optimizing performance for high-load applications.</font></font></p></li>
-</ul>
-<h3 class="western"><font face="Georgia, serif"><b>Software Developer
-(Python)</b></font></h3>
-<p class="western" style="line-height: 100%; margin-top: 0.19in; margin-bottom: 0.19in">
-<font face="Georgia, serif"><font size="3" style="font-size: 12pt"><i>ARIISCO
-| January 2020 – April 2021</i></font></font></p>
-<ul>
-	<li><p class="western" style="line-height: 100%; margin-top: 0.19in; margin-bottom: 0in">
-	<font face="Georgia, serif"><font size="3" style="font-size: 12pt">Improved
-	system stability and scalability by 30% through efficient debugging
-	and optimization.</font></font></p></li>
-	<li><p class="western" style="line-height: 100%; margin-bottom: 0in">
-	<font face="Georgia, serif"><font size="3" style="font-size: 12pt">Reduced
-	bugs in production by 30% through thorough code reviews and unit
-	testing.</font></font></p></li>
-	<li><p class="western" style="line-height: 100%; margin-bottom: 0.19in">
-	<font face="Georgia, serif"><font size="3" style="font-size: 12pt">Delivered
-	tailored software solutions that met system requirements and client
-	needs effectively.</font></font></p></li>
-</ul>
-<p class="western" style="line-height: 100%; margin-bottom: 0in"><br/>
+        <!-- Professional Experience -->
+        <section class="section-card">
+            <h2>Professional Experience</h2>
+            
+            <div class="timeline">
+                <!-- Blubank -->
+                <div class="timeline-item">
+                    <h3>Lead Backend Engineer (Django & Python)</h3>
+                    <p class="timeline-date">Blubank | May 2025 – Present</p>
+                    <ul>
+                        <li>Orchestrated the technical acquisition of a core e-commerce platform from a partner company, refactoring over 80% of the original codebase to improve performance, security, and maintainability.</li>
+                        <li>Configured and customized critical services including Celery, Kafka, MinIO, Oracle, and Logging to align with enterprise-grade architecture.</li>
+                        <li>Designed and implemented the core application layer (custom Views, Requests, and Responses) to standardize system structure.</li>
+                        <li>Led the recruitment and onboarding of new backend engineers, conducting technical interviews and defining best practices.</li>
+                        <li>Currently managing the team developing the Seller Panel, integrating multi-service communication and real-time data synchronization.</li>
+                    </ul>
+                </div>
+                
+                <!-- Freelance -->
+                <div class="timeline-item">
+                    <h3>Freelance Python & Blockchain Developer</h3>
+                    <p class="timeline-date">October 2023 – February 2025</p>
+                    <ul>
+                        <li>Developed Solana Whale Address Tracker, a blockchain analytics platform integrating Solana RPC APIs, AI/ML models, and real-time transaction analysis.</li>
+                        <li>Provided crypto analytics consulting, leveraging on-chain data to predict market trends and track DeFi liquidity movements.</li>
+                        <li>Deployed scalable blockchain solutions using Docker, Kubernetes, PostgreSQL, MongoDB, and CI/CD pipelines.</li>
+                        <li>Implemented secure data handling protocols and JWT-based authentication mechanisms.</li>
+                    </ul>
+                </div>
+                
+                <!-- XPHXCO -->
+                <div class="timeline-item">
+                    <h3>Blockchain Developer</h3>
+                    <p class="timeline-date">XPHXCO | March 2023 – October 2023</p>
+                    <ul>
+                        <li>Delivered smart contracts and NFT solutions, contributing to the launch of three blockchain-based products.</li>
+                        <li>Improved system reliability by 25% through advanced security and scalability measures in DApps.</li>
+                        <li>Spearheaded blockchain integrations using Web3.py, enhancing performance by 20%.</li>
+                        <li>Implemented secure authentication protocols such as OAuth 2.0 and OpenID Connect (OIDC).</li>
+                    </ul>
+                </div>
+                
+                <!-- ARIISCO - Technical Lead -->
+                <div class="timeline-item">
+                    <h3>Technical Lead/Manager of Web Development Team</h3>
+                    <p class="timeline-date">ARIISCO | March 2022 – March 2023</p>
+                    <ul>
+                        <li>Directed a team of 10 developers, achieving a 95% on-time project delivery rate for over 15 web applications.</li>
+                        <li>Increased delivery efficiency by 20% through optimized resource allocation and process improvements.</li>
+                        <li>Reduced codebase issues by 40% by establishing coding standards and conducting regular code reviews.</li>
+                        <li>Boosted team productivity by 30% through mentoring and skill development initiatives.</li>
+                    </ul>
+                </div>
+                
+                <!-- ARIISCO - Web Developer -->
+                <div class="timeline-item">
+                    <h3>Web Developer (Django, Flask, FastAPI)</h3>
+                    <p class="timeline-date">ARIISCO | April 2021 – March 2022</p>
+                    <ul>
+                        <li>Enhanced web application performance by 25% through advanced optimization techniques using Python (Django, FastAPI).</li>
+                        <li>Designed and implemented features that increased user engagement by 15%.</li>
+                        <li>Developed asynchronous REST APIs with FastAPI, optimizing performance for high-load applications.</li>
+                    </ul>
+                </div>
+                
+                <!-- ARIISCO - Software Developer -->
+                <div class="timeline-item">
+                    <h3>Software Developer (Python)</h3>
+                    <p class="timeline-date">ARIISCO | January 2020 – April 2021</p>
+                    <ul>
+                        <li>Improved system stability and scalability by 30% through efficient debugging and optimization.</li>
+                        <li>Reduced bugs in production by 30% through thorough code reviews and unit testing.</li>
+                        <li>Delivered tailored software solutions that met system requirements and client needs effectively.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-</p>
-<h2 class="western"><font face="Georgia, serif"><b>Education</b></font></h2>
-<p class="western" style="line-height: 100%; margin-top: 0.19in; margin-bottom: 0.19in">
-<font face="Georgia, serif"><font size="3" style="font-size: 12pt"><b>Bachelor
-of Software Engineering</b></font></font></p>
-<p class="western" style="line-height: 100%; margin-top: 0.19in; margin-bottom: 0.19in">
-<font face="Georgia, serif"><font size="3" style="font-size: 12pt"><i>Kashan
-University | 2016 – 2020</i></font><font size="3" style="font-size: 12pt"><br/>
-Relevant
-Coursework: Data Structures, Algorithms, Operating Systems,
-Artificial Intelligence, Web Development.</font></font></p>
-<p class="western" style="line-height: 100%; margin-bottom: 0in"><br/>
+        <!-- Education -->
+        <section class="section-card">
+            <h2>Education</h2>
+            <h3>Bachelor of Software Engineering</h3>
+            <p class="timeline-date">Kashan University | 2016 – 2020</p>
+            <p>Relevant Coursework: Data Structures, Algorithms, Operating Systems, Artificial Intelligence, Web Development.</p>
+        </section>
 
-</p>
-<h2 class="western"><font face="Georgia, serif"><b>Skills</b></font></h2>
-<ul>
-	<li><p class="western" style="line-height: 100%; margin-top: 0.19in; margin-bottom: 0in">
-	<font face="Georgia, serif"><font size="3" style="font-size: 12pt"><b>Programming
-	Languages &amp; Frameworks:</b></font><font size="3" style="font-size: 12pt">
-	Python (Django, Flask, FastAPI, Web3.py), JavaScript, HTML, CSS,
-	Bootstrap</font></font></p></li>
-	<li><p class="western" style="line-height: 100%; margin-bottom: 0in">
-	<font face="Georgia, serif"><font size="3" style="font-size: 12pt"><b>Asynchronous
-	Programming:</b></font><font size="3" style="font-size: 12pt">
-	Proficient in </font><font size="3" style="font-size: 12pt"><b>async/await</b></font><font size="3" style="font-size: 12pt">,
-	</font><font size="3" style="font-size: 12pt"><b>asyncio</b></font><font size="3" style="font-size: 12pt">,
-	</font><font size="3" style="font-size: 12pt"><b>aiohttp</b></font></font></p></li>
-	<li><p class="western" style="line-height: 100%; margin-bottom: 0in">
-	<font face="Georgia, serif"><font size="3" style="font-size: 12pt"><b>APIs
-	&amp; Security:</b></font><font size="3" style="font-size: 12pt">
-	RESTful API Design, GraphQL, </font><font size="3" style="font-size: 12pt"><b>OAuth
-	2.0</b></font><font size="3" style="font-size: 12pt">, </font><font size="3" style="font-size: 12pt"><b>OpenID
-	Connect (OIDC)</b></font><font size="3" style="font-size: 12pt">,
-	</font><font size="3" style="font-size: 12pt"><b>JWT</b></font><font size="3" style="font-size: 12pt">,
-	API Security Best Practices, OWASP Standards</font></font></p></li>
-	<li><p class="western" style="line-height: 100%; margin-bottom: 0in">
-	<font face="Georgia, serif"><font size="3" style="font-size: 12pt"><b>Databases:</b></font><font size="3" style="font-size: 12pt">
-	PostgreSQL, MySQL (SQL), MongoDB (NoSQL), Data
-	Normalization/Denormalization, Oracle</font></font></p></li>
-	<li><p class="western" style="line-height: 100%; margin-bottom: 0in">
-	<font face="Georgia, serif"><font size="3" style="font-size: 12pt"><b>DevOps
-	&amp; Tools:</b></font><font size="3" style="font-size: 12pt">
-	Docker, Kubernetes, CI/CD Pipelines, Linux Server Administration,
-	Redis, Celery, Git, Helm</font></font></p></li>
-	<li><p class="western" style="line-height: 100%; margin-bottom: 0in">
-	<font face="Georgia, serif"><font size="3" style="font-size: 12pt"><b>Blockchain
-	&amp; Crypto:</b></font><font size="3" style="font-size: 12pt">
-	Solana RPC APIs, Web3 Integrations, DeFi, Smart Contracts,
-	Cryptographic Algorithms, Blockchain Security</font></font></p></li>
-	<li><p class="western" style="line-height: 100%; margin-bottom: 0.19in">
-	<font face="Georgia, serif"><font size="3" style="font-size: 12pt"><b>Soft
-	Skills:</b></font><font size="3" style="font-size: 12pt">
-	Leadership, Problem-solving, Agile/Scrum Methodologies, Team
-	Collaboration, Cross-functional Collaboration</font></font></p></li>
-</ul>
-<p class="western" style="line-height: 100%; margin-bottom: 0in"><br/>
+        <!-- Skills -->
+        <section class="section-card">
+            <h2>Skills</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="skill-item">
+                        <div class="skill-name">Programming Languages & Frameworks</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Asynchronous Programming</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">APIs & Security</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 92%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="skill-item">
+                        <div class="skill-name">Databases</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 88%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">DevOps & Tools</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Blockchain & Crypto</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-4">
+                <h4>Technical Skills</h4>
+                <div>
+                    <span class="badge badge-custom">Python</span>
+                    <span class="badge badge-custom">Django</span>
+                    <span class="badge badge-custom">FastAPI</span>
+                    <span class="badge badge-custom">Flask</span>
+                    <span class="badge badge-custom">Web3.py</span>
+                    <span class="badge badge-custom">JavaScript</span>
+                    <span class="badge badge-custom">HTML/CSS</span>
+                    <span class="badge badge-custom">Bootstrap</span>
+                    <span class="badge badge-custom">async/await</span>
+                    <span class="badge badge-custom">asyncio</span>
+                    <span class="badge badge-custom">aiohttp</span>
+                    <span class="badge badge-custom">RESTful API</span>
+                    <span class="badge badge-custom">GraphQL</span>
+                    <span class="badge badge-custom">OAuth 2.0</span>
+                    <span class="badge badge-custom">OpenID Connect</span>
+                    <span class="badge badge-custom">JWT</span>
+                    <span class="badge badge-custom">PostgreSQL</span>
+                    <span class="badge badge-custom">MySQL</span>
+                    <span class="badge badge-custom">MongoDB</span>
+                    <span class="badge badge-custom">Oracle</span>
+                    <span class="badge badge-custom">Docker</span>
+                    <span class="badge badge-custom">Kubernetes</span>
+                    <span class="badge badge-custom">CI/CD</span>
+                    <span class="badge badge-custom">Linux</span>
+                    <span class="badge badge-custom">Redis</span>
+                    <span class="badge badge-custom">Celery</span>
+                    <span class="badge badge-custom">Git</span>
+                    <span class="badge badge-custom">Helm</span>
+                    <span class="badge badge-custom">Solana RPC APIs</span>
+                    <span class="badge badge-custom">Web3</span>
+                    <span class="badge badge-custom">DeFi</span>
+                    <span class="badge badge-custom">Smart Contracts</span>
+                </div>
+                
+                <h4 class="mt-3">Soft Skills</h4>
+                <div>
+                    <span class="badge badge-custom">Leadership</span>
+                    <span class="badge badge-custom">Problem-solving</span>
+                    <span class="badge badge-custom">Agile/Scrum</span>
+                    <span class="badge badge-custom">Team Collaboration</span>
+                    <span class="badge badge-custom">Cross-functional Collaboration</span>
+                </div>
+            </div>
+        </section>
 
-</p>
-<h2 class="western"><a name="_GoBack"></a><font face="Georgia, serif"><b>Projects</b></font></h2>
-<h3 class="western"><font face="Georgia, serif"><b>Algorithmic
-Trading Bot for Binance</b></font></h3>
-<p class="western" style="line-height: 108%; margin-top: 0.03in; margin-bottom: 0in">
-<font face="Georgia, serif"><font size="3" style="font-size: 12pt"><i>March
-2020 – April 2020</i></font></font></p>
-<ul>
-	<li><p class="western" style="line-height: 100%; margin-top: 0.19in; margin-bottom: 0in">
-	<font face="Georgia, serif"><font size="3" style="font-size: 12pt">Developed
-	a trading bot in </font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Python</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	using the Binance API, leveraging </font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Pandas</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	and </font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">NumPy</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	for technical analysis and achieving a 20% ROI during backtesting. </font></font>
-	</p></li>
-</ul>
-<p class="western" style="line-height: 108%; page-break-inside: avoid; margin-top: 0.03in; margin-bottom: 0in; page-break-after: avoid">
-<br/>
+        <!-- Projects -->
+        <section class="section-card">
+            <h2>Projects</h2>
+            
+            <div class="project-card">
+                <h3 class="project-title">Telegram Bot Service (AI-Driven Trading Assistant)</h3>
+                <p class="project-date">March 2025 - June 2025</p>
+                <p>Developed a production-grade Telegram bot service leveraging AI, analytics, and payment automation, designed for scalability and modular deployment.</p>
+                <ul>
+                    <li>Architected a microservice-based backend using FastAPI, Tortoise ORM, Redis, and PostgreSQL for high-throughput asynchronous processing.</li>
+                    <li>Integrated AI chat capabilities via ChatGPT API, supporting multi-language user interaction and smart context management.</li>
+                    <li>Built a trade analytics engine to process real-time trading data, visualize insights, and detect anomalies.</li>
+                    <li>Implemented secure payment workflows via Zibal and multiple gateways, including transaction logging and webhook validation.</li>
+                </ul>
+            </div>
+            
+            <div class="project-card">
+                <h3 class="project-title">Telebot Lite (Python Library)</h3>
+                <p class="project-date">March 2025 – May 2025</p>
+                <p>Developed a lightweight and modular Python library to simplify Telegram Bot development and webhook integration.</p>
+                <ul>
+                    <li>Designed and published an open-source Telegram Bot Library with over 90% test coverage and clean asynchronous architecture.</li>
+                    <li>Implemented a developer-friendly API supporting command routing, context management, and custom middleware.</li>
+                    <li>Deployed and versioned the package on PyPI, complete with documentation and CI/CD pipelines for automated testing and release.</li>
+                    <li>Empowered developers to build bots 5× faster with simplified webhook setup and modular design.</li>
+                </ul>
+            </div>
+            
+            <div class="project-card">
+                <h3 class="project-title">Whale Address Solana Memecoin</h3>
+                <p class="project-date">January 2025 – May 2025</p>
+                <p>Developed a full-stack blockchain analytics system to track whale investors in Solana memecoins.</p>
+                <ul>
+                    <li>Leveraged Solana RPC APIs for real-time data extraction.</li>
+                    <li>Built a scalable backend with Django and FastAPI to handle high-frequency transactions.</li>
+                    <li>Integrated AI/ML models to predict market movements.</li>
+                    <li>Designed an interactive frontend with React.js and automated transaction alerts via a Telegram bot.</li>
+                    <li>Orchestrated deployments using Docker and Kubernetes.</li>
+                </ul>
+            </div>
+            
+            <div class="project-card">
+                <h3 class="project-title">Real-Time Anesthesia Monitoring System</h3>
+                <p class="project-date">April 2021 – May 2021</p>
+                <p>Built a real-time monitoring backend using Django Channels for WebSocket communication.</p>
+                <ul>
+                    <li>Integrated with Redis for high-speed caching and MySQL for persistent data storage.</li>
+                </ul>
+            </div>
+            
+            <div class="project-card">
+                <h3 class="project-title">Backend for Educational Game</h3>
+                <p class="project-date">November 2020 – March 2021</p>
+                <p>Architected and deployed a scalable backend for a Photon-based educational game.</p>
+                <ul>
+                    <li>Built the RESTful API with Django Rest Framework and deployed on a Linux server via Apache.</li>
+                </ul>
+            </div>
+            
+            <div class="project-card">
+                <h3 class="project-title">Automated Stock Trading System</h3>
+                <p class="project-date">May 2020 – September 2020</p>
+                <p>Engineered a full-stack automated trading application using Python.</p>
+                <ul>
+                    <li>Featured a Tkinter desktop GUI and a Kivy mobile app.</li>
+                    <li>Leveraged Selenium for web scraping and MySQL for data management.</li>
+                </ul>
+            </div>
+            
+            <div class="project-card">
+                <h3 class="project-title">Algorithmic Trading Bot for Binance</h3>
+                <p class="project-date">March 2020 – April 2020</p>
+                <p>Developed a trading bot in Python using the Binance API.</p>
+                <ul>
+                    <li>Leveraged Pandas and NumPy for technical analysis and achieved a 20% ROI during backtesting.</li>
+                </ul>
+            </div>
+        </section>
 
-</p>
-<h3 class="western"><font face="Georgia, serif"><b>Automated Stock
-Trading System</b></font></h3>
-<p class="western" style="line-height: 108%; margin-top: 0.03in; margin-bottom: 0in">
-<font face="Georgia, serif"><font size="3" style="font-size: 12pt"><i>May
-2020 – September 2020</i></font></font></p>
-<ul>
-	<li><p class="western" style="line-height: 100%; margin-top: 0.19in; margin-bottom: 0in">
-	<font face="Georgia, serif"><font size="3" style="font-size: 12pt">Engineered
-	a full-stack automated trading application using </font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Python</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">,
-	featuring a </font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Tkinter</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	desktop GUI and a </font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Kivy</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	mobile app, while leveraging </font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Selenium</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	for web scraping and </font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">MySQL</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	for data management. </font></font>
-	</p></li>
-</ul>
-<p class="western" style="line-height: 100%; margin-left: 0.5in; margin-top: 0.19in; margin-bottom: 0in">
-<br/>
+        <!-- Certifications -->
+        <section class="section-card">
+            <h2>Certifications</h2>
+            <ul>
+                <li><strong>Artificial Intelligence and Machine Learning</strong> | Quera | 2024</li>
+                <li><strong>Full Stack Web Development (Django-focused)</strong> | Jahad Daneshgahi (Sharif University) | Apr 2022</li>
+                <li><strong>Smart Contracts</strong> | University at Buffalo | Apr 2022</li>
+                <li><strong>Blockchain Basics</strong> | University at Buffalo | Feb 2022</li>
+                <li><strong>Certified Ethical Hacker (CEH)</strong> | NooraNet | Jul 2019</li>
+            </ul>
+        </section>
 
-</p>
-<h3 class="western"><font face="Georgia, serif"><b>Backend for
-Educational Game</b></font></h3>
-<p class="western" style="line-height: 108%; margin-top: 0.03in; margin-bottom: 0in">
-<font face="Georgia, serif"><font size="3" style="font-size: 12pt"><i>November
-2020 – March 2021</i></font></font></p>
-<ul>
-	<li><p class="western" style="line-height: 100%; margin-top: 0.19in; margin-bottom: 0in">
-	<font face="Georgia, serif"><font size="3" style="font-size: 12pt">Architected
-	and deployed a scalable backend for a Photon-based educational game,
-	building the RESTful API with </font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Django
-	Rest Framework</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	and deploying on a Linux server via </font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Apache</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">.
-	</font></font>
-	</p></li>
-</ul>
-<p class="western" style="line-height: 100%; margin-left: 0.5in; margin-top: 0.19in; margin-bottom: 0in">
-<br/>
+        <!-- Languages -->
+        <section class="section-card">
+            <h2>Languages</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="skill-item">
+                        <div class="skill-name">English (Fluent)</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-item">
+                        <div class="skill-name">German (Fluent)</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-item">
+                        <div class="skill-name">Persian (Native)</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 100%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-</p>
-<h3 class="western"><font face="Georgia, serif"><b>Real-Time
-Anesthesia Monitoring System</b></font></h3>
-<p class="western" style="line-height: 108%; margin-top: 0.03in; margin-bottom: 0in">
-<font face="Georgia, serif"><font size="3" style="font-size: 12pt"><i>April
-2021 – May 2021</i></font></font></p>
-<ul>
-	<li><p class="western" style="line-height: 100%; margin-top: 0.19in; margin-bottom: 0in">
-	<font face="Georgia, serif"><font size="3" style="font-size: 12pt">Built
-	a real-time monitoring backend using </font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Django
-	Channels</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	for WebSocket communication, integrated with </font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Redis</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	for high-speed caching and </font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">MySQL</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	for persistent data storage. </font></font><font face="Georgia, serif">
-	</font>
-	</p></li>
-</ul>
-<p class="western" style="font-variant: normal; letter-spacing: normal; font-style: normal; line-height: 100%; margin-bottom: 0.19in">
-<br/>
-<br/>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Alireza Sarami. All Rights Reserved.</p>
+            <p>Designed for GitHub Pages</p>
+        </div>
+    </footer>
 
-</p>
-<h3 class="western"><font face="Georgia, serif"><b>Whale Address
-Solana Memecoin</b></font></h3>
-<p class="western" style="line-height: 108%; margin-top: 0.03in; margin-bottom: 0in">
-<font face="Georgia, serif"><font size="3" style="font-size: 12pt"><i><b>January
-2025 – May 2025</b></i></font></font></p>
-<ul>
-	<li><p class="western"><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Developed
-	a full-stack blockchain analytics system to track whale investors in
-	Solana memecoins, leveraging </font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Solana
-	RPC APIs</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	for real-time data extraction. </font></font>
-	</p></li>
-</ul>
-<ul>
-	<li><p class="western" style="margin-bottom: 0in"><font face="Georgia, serif">Built
-	a scalable backend with </font><strong><font face="Georgia, serif">Django</font></strong><font face="Georgia, serif">
-	and </font><strong><font face="Georgia, serif">FastAPI</font></strong><font face="Georgia, serif">
-	to handle high-frequency transactions and integrated </font><strong><font face="Georgia, serif">AI/ML
-	models</font></strong><font face="Georgia, serif"> to predict market
-	movements. </font>
-	</p></li>
-	<li><p class="western" style="margin-bottom: 0in"><font face="Georgia, serif">Designed
-	an interactive frontend with </font><strong><font face="Georgia, serif">React.js</font></strong><font face="Georgia, serif">,
-	automated transaction alerts via a </font><strong><font face="Georgia, serif">Telegram
-	bot</font></strong><font face="Georgia, serif">, and orchestrated
-	deployments using </font><strong><font face="Georgia, serif">Docker</font></strong><font face="Georgia, serif">
-	and </font><strong><font face="Georgia, serif">Kubernetes</font></strong><font face="Georgia, serif">.
-	</font>
-	</p></li>
-	<li><p class="western"><font face="Georgia, serif">Optimized data
-	handling with a hybrid database approach, using </font><strong><font face="Georgia, serif">PostgreSQL</font></strong><font face="Georgia, serif">
-	for relational data and </font><strong><font face="Georgia, serif">MongoDB</font></strong><font face="Georgia, serif">
-	for unstructured analytics.  </font>
-	</p></li>
-</ul>
-<p class="western" style="line-height: 100%; text-indent: -0.31in; margin-left: 0.56in; margin-bottom: 0.19in">
-<br/>
-<br/>
-
-</p>
-<h3 class="western"><font face="Georgia, serif"><b>Telebot Lite
-(Python Library)</b></font></h3>
-<p class="western" style="line-height: 100%; margin-bottom: 0.19in"><font face="Georgia, serif"><span style="font-variant: normal"><font color="#000000"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b>March
-2025 </b></span></span></font></font></span><span style="font-variant: normal"><font color="#000000"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><i><b>–</b></i></span></font></font></span><span style="font-variant: normal"><font color="#000000"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b>
-May 2025</b></span></span></font></font></span></font><span class="sd-abs-pos" style="position: absolute; top: 0in; left: 1.9in; width: 2px"><img src="Alireza-Sarami-resume_html_461524e0.gif" name="Shape6" alt="Shape6" align="left" width="2" height="63"/>
-</span><span id="Frame1" dir="ltr" style="position: absolute; top: 1.25in; width: 0.02in; border: none; padding: 0in; background: #ffffff"><p class="western" style="orphans: 2; widows: 2">
-	<span style="font-variant: normal"><font color="#000000"><font face="apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Fira Sans, Ubuntu, Oxygen, Oxygen Sans, Cantarell, Droid Sans, Apple Color Emoji, Segoe UI Emoji, Segoe UI Emoji, Segoe UI Symbol, Lucida Grande, Helvetica, Arial, sans-serif"><font size="2" style="font-size: 10pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Mar</span></span></span></font></font></font></span></p>
-</span>
-</p>
-<p class="western" style="line-height: 100%; margin-bottom: 0.19in"><span style="font-variant: normal"><font color="#000000"><font face="Georgia, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Developed
-a </span></span></span></font></font></font></span><strong><span style="font-variant: normal"><font color="#000000"><font face="Georgia, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal">lightweight
-and modular Python library</span></span></font></font></font></span></strong><span style="font-variant: normal"><font color="#000000"><font face="Georgia, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">
-to simplify </span></span></span></font></font></font></span><strong><span style="font-variant: normal"><font color="#000000"><font face="Georgia, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal">Telegram
-Bot</span></span></font></font></font></span></strong><span style="font-variant: normal"><font color="#000000"><font face="Georgia, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">
-development and webhook integration.</span></span></span></font></font></font></span></p>
-<ul>
-	<li><p class="western" style="line-height: 100%"><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Designed
-	and published</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	an open-source </font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Telegram
-	Bot Library</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	with over </font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">90%
-	test coverage</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	and clean asynchronous architecture.</font></font></p></li>
-	<li><p class="western" style="line-height: 100%"><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Implemented</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	a developer-friendly API supporting </font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">command
-	routing</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">,
-	</font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">context
-	management</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">,
-	and </font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">custom
-	middleware</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">.</font></font></p></li>
-	<li><p class="western" style="line-height: 100%"><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Deployed
-	and versioned</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	the package on </font></font><font color="#0563c1"><u><a href="https://pypi.org/project/telebot-lite/" target="_top"><font color="#2a6099"><font face="Georgia, serif"><font size="3" style="font-size: 12pt"><b>PyPI</b></font></font></font></a></u></font><font face="Georgia, serif"><font size="3" style="font-size: 12pt">,
-	complete with documentation and CI/CD pipelines for automated
-	testing and release.</font></font></p></li>
-	<li><p class="western" style="line-height: 100%"><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Empowered
-	developers to build bots </font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">5×
-	faster</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	with simplified webhook setup and modular design.</font></font></p></li>
-</ul>
-<p class="western"><br/>
-<br/>
-
-</p>
-<h3 class="western"><font face="Georgia, serif"><b>Telegram Bot
-Service (AI-Driven Trading Assistant)</b></font></h3>
-<p class="western"><font face="Georgia, serif"><span style="font-variant: normal"><font color="#000000"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><b>March
-2025 - June 2025</b></span></span></font></font></span></font><span class="sd-abs-pos" style="position: absolute; top: 0in; left: 1.9in; width: 2px"><img src="Alireza-Sarami-resume_html_461524e0.gif" name="Shape7" alt="Shape7" align="left" width="2" height="63"/>
-</span><span id="Frame2" dir="ltr" style="position: absolute; top: 5.13in; width: 0.02in; border: none; padding: 0in; background: #ffffff"><p class="western" style="orphans: 2; widows: 2">
-	<span style="font-variant: normal"><font color="#000000"><font face="apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Fira Sans, Ubuntu, Oxygen, Oxygen Sans, Cantarell, Droid Sans, Apple Color Emoji, Segoe UI Emoji, Segoe UI Emoji, Segoe UI Symbol, Lucida Grande, Helvetica, Arial, sans-serif"><font size="2" style="font-size: 10pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Mar</span></span></span></font></font></font></span></p>
-</span>
-</p>
-<p class="western" style="line-height: 100%"><span style="font-variant: normal"><font color="#000000"><font face="Georgia, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Developed
-a </span></span></span></font></font></font></span><strong><span style="font-variant: normal"><font color="#000000"><font face="Georgia, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal">production-grade
-Telegram bot service</span></span></font></font></font></span></strong><span style="font-variant: normal"><font color="#000000"><font face="Georgia, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">
-leveraging </span></span></span></font></font></font></span><strong><span style="font-variant: normal"><font color="#000000"><font face="Georgia, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal">AI</span></span></font></font></font></span></strong><span style="font-variant: normal"><font color="#000000"><font face="Georgia, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">,
-</span></span></span></font></font></font></span><strong><span style="font-variant: normal"><font color="#000000"><font face="Georgia, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal">analytics</span></span></font></font></font></span></strong><span style="font-variant: normal"><font color="#000000"><font face="Georgia, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">,
-and </span></span></span></font></font></font></span><strong><span style="font-variant: normal"><font color="#000000"><font face="Georgia, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal">payment
-automation</span></span></font></font></font></span></strong><span style="font-variant: normal"><font color="#000000"><font face="Georgia, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">,
-designed for scalability and modular deployment.</span></span></span></font></font></font></span></p>
-<ul>
-	<li><p class="western" style="line-height: 100%"><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Architected</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	a microservice-based backend using </font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">FastAPI</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">,
-	</font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Tortoise
-	ORM</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">,
-	</font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Redis</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">,
-	and </font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">PostgreSQL</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	for high-throughput asynchronous processing.</font></font></p></li>
-	<li><p class="western" style="line-height: 100%"><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Integrated</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	</font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">AI
-	chat capabilities</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	via ChatGPT API, supporting multi-language user interaction and
-	smart context management.</font></font></p></li>
-	<li><p class="western" style="line-height: 100%"><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Built</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	a </font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">trade
-	analytics engine</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	to process real-time trading data, visualize insights, and detect
-	anomalies.</font></font></p></li>
-	<li><p class="western" style="line-height: 100%"><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Implemented</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	secure </font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">payment
-	workflows</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	via </font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Zibal</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	and multiple gateways, including transaction logging and webhook
-	validation.</font></font></p></li>
-	<li><p class="western" style="line-height: 100%"><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Automated
-	deployments</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	using </font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Docker</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">,
-	</font></font><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Nginx</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">,
-	and CI/CD scripts for zero-downtime updates.</font></font></p></li>
-	<li><p class="western" style="line-height: 100%"><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">Enhanced
-	reliability</font></font></strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt">
-	through centralized logging, monitoring, and structured domain-based
-	project organization.</font></font></p></li>
-</ul>
-<p class="western" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0.11in">
-<br/>
-<br/>
-
-</p>
-<h2 class="western"><font face="Georgia, serif"><b>Certifications</b></font></h2>
-<ul>
-	<li><p class="western" style="line-height: 100%; margin-top: 0.19in; margin-bottom: 0in">
-	<font face="Georgia, serif"><font size="3" style="font-size: 12pt"><b>Artificial
-	Intelligence</b></font><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
-	and </span></font><font size="3" style="font-size: 12pt"><b>Machine
-	Learning</b></font><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
-	| Quera | 2024</span></font></font></p></li>
-	<li><p class="western" style="line-height: 100%; margin-bottom: 0in">
-	<strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt"><b>Full
-	Stack</b></font></font></strong><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
-	Web Development (</span></font></font></strong><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt"><b>Django</b></font></font></strong><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">-focused)
-	| Jahad Daneshgahi (Sharif University) | Apr 2022	</span></font></font></strong></p></li>
-	<li><p class="western" style="line-height: 100%; margin-bottom: 0in">
-	<strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt"><b>Smart
-	Contracts</b></font></font></strong><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
-	| University at Buffalo | Apr 2022</span></font></font></strong></p></li>
-	<li><p class="western" style="line-height: 100%; margin-bottom: 0in">
-	<strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt"><b>Blockchain</b></font></font></strong><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
-	Basics | University at Buffalo | Feb 2022</span></font></font></strong></p></li>
-	<li><p class="western" style="line-height: 100%; margin-bottom: 0.19in">
-	<strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt"><b>Certified
-	Ethical Hacker</b></font></font></strong><strong><font face="Georgia, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
-	(CEH) | NooraNet | Jul 2019</span></font></font></strong></p></li>
-</ul>
-<h2 class="western"><font face="Georgia, serif"><b>Languages</b></font></h2>
-<ul>
-	<li><p class="western" style="line-height: 100%; margin-bottom: 0.19in">
-	<font face="Georgia, serif"><font size="3" style="font-size: 12pt">English
-	(Fluent), German (Fluent), Persian (Native)</font></font></p></li>
-</ul>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
